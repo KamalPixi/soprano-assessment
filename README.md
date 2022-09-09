@@ -1,22 +1,22 @@
-## Soprano assessment - A PHP dockerize application that produce and consumes SMS messages from/to a RabbitMQ server queue.
+### Soprano assessment - A PHP dockerize application that produce and consumes SMS messages from/to a RabbitMQ server queue.
 
-- **Requirements**
-<p>Docker</p>
-<p>Docker Compose</p>
+#### Requirements
+- Docker
+- Docker Compose
 
-- **Building & running the application containers**
-<p>docker compose up -d</p>
+#### Building & running the application containers
+- docker compose up -d
 
-- **Remove containers**
-<p>docker compose down</p>
+#### To remove containers
+- docker compose down
 
-- **Making request to the root url, will receive a json contains examples.**
-<p>To know api using doc/data-structure - [GET] HOST-IP</p>
+#### Making request to the root url, will receive a json contains examples.
+- List of example - [GET] HOST-IP
 
-- **API endpoints**
-<p>To send/queue an SMS - [POST] HOST-IP/queues.php</p>
-<p>Ex: data structure {"to":"", "message":""}</p>
+#### API endpoints
+- To send/queue an SMS - [POST] HOST-IP/queues.php
+  <p>Ex: data structure {"to":"", "message":""}</p>
 
-<p>To get all SMS from the queue - [GET] HOST-IP/queues.php</p>
-<p>To get an SMS from the queue -  [GET] HOST-IP/queues_single.php</p>
-<p>To  get total SMS currently in the queue -  [GET] HOST-IP/queues_total.php</p>
+- To get all SMS from the queue - [GET] HOST-IP/queues.php
+- To get an SMS from the queue -  [GET] HOST-IP/queues_single.php
+- To  get total SMS currently in the queue -  [GET] HOST-IP/queues_total.php
