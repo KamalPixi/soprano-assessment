@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+
+  # API
+  soprano_sms_api:
+    build:
+      context: ./soprano_sms_api
+      dockerfile: Dockerfile
+    container_name: soprano-sms-api
+    ports:
+      - "80:80"
+    networks:
+      - soprano_sms_network
+
+  # RabbitMQ
+  soprano_rabbitmq:
+    build:
+      context: ./rabbitmq
+      dockerfile: Dockerfile
+    container_name: soprano-rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RMQ_USER}
+      - RABBITMQ_DEFAULT_PASS=${RMQ_PASSWORD}
+    # to make rabbitmq accessible from browser.
+    ports:
+      - "15672:15672"
+    networks:
+      - soprano_sms_network
+    
+
+# A network for these 2 containers only 
+networks:
+  soprano_sms_network:
+    driver: bridge
