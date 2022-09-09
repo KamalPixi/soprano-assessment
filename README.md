@@ -15,7 +15,7 @@
 
 #### API endpoints
 - To send/queue an SMS - [POST] HOST-IP/queues.php
-  <p>Ex: data structure {"to":"", "message":""}</p>
+  <p>Ex: data structure {"to":"601111085061", "message":"Hello"}</p>
 
 - To get all SMS from the queue - [GET] HOST-IP/queues.php
 - To get an SMS from the queue -  [GET] HOST-IP/queues_single.php
